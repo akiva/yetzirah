@@ -8,6 +8,9 @@ a framework but rather a collection of useful patterns, functions,
 mixins, and other classes to ease CSS development and encourage the
 [KISS principle][2].
 
+[![NPM](https://nodei.co/npm/yetzirah.png)](https://nodei.co/npm/yetzirah/)
+[![Travis build status](https://travis-ci.org/akiva/yetzirah.png?branch=master)](https://travis-ci.org/akiva/yetzirah)
+
 ## Installation
 
 It is assumed that you already have a working installation of both
