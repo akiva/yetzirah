@@ -1,7 +1,6 @@
 {
   "name": "yetzirah",
   "version": "0.1.0-alpha",
-  "private": true,
   "description": "A flexible, semantic, and responsive library for Stylus",
   "main": "lib/yetzirah.js",
   "repository": {
