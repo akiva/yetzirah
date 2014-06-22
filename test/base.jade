@@ -1,0 +1,130 @@
+h2#base Base styles and foundation
+p
+  | Yetzirah implements
+  = ' '
+  a(href='http://necolas.github.com/normalize.css/') Normalize.css
+  |  rather than a CSS reset. This allows for building atop a reliable,
+  | HTML5-ready base, yielding a satisfactory cross-browser consistency.
+  | The purpose of this library is to keep things as modular and
+  | extensible as possible. As such, we aim to minimize the amount of
+  | element styles we alter, instead opting to focus on form and
+  | structure (using semantic styles, functions, and mixins).
+p All font sizes are defined in <code>rem</code>.
+h3 Headings
+.sandbox
+  h1 Heading 1
+  h2 Heading 2
+  h3 Heading 3
+  h4 Heading 4
+  h5 Heading 5
+  h6 Heading 6
+h3 Lists
+h4 Ordered list
+.sandbox
+  ol
+    li Ordered list item
+    li Ordered list item
+      ol
+        li Ordered list item
+        li Ordered list item
+          ol
+            li Ordered list item
+            li Ordered list item
+        li Ordered list item
+    li Ordered list item
+h4 Unordered list
+.sandbox
+  ul
+    li Unordered list item
+    li Unordered list item
+      ul
+        li Unordered list item
+        li Unordered list item
+          ul
+            li Unordered list item
+            li Unordered list item
+        li Unordered list item
+    li Unordered list item
+h4 Unordered comma-separated list
+.sandbox
+  ul.comma-list
+    li Unordered list item
+    li Unordered list item
+    li Unordered list item
+h4 Unordered serial comma-separated list
+.sandbox
+  ul.serial-comma-list
+    li Unordered list item
+    li Unordered list item
+    li Unordered list item
+h4 Definition list
+.sandbox
+  dl
+    dt Definition term
+    dd Definition description
+    dt Definition term
+    dd Definition description
+    dd Definition description
+    dt Definition term
+    dt Definition term
+    dd Definition description
+h3 Addresses
+.sandbox
+  address
+    a(href='https://github.com/akiva') Akiva Levy
+h3 Blockquotes
+h4 Without <code>cite</code> tag
+.sandbox
+  blockquote
+    p.
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+      diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+      aliquam erat volutpat.
+h4 With <code>cite</code> tag
+.sandbox
+  blockquote
+    p.
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+      diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+      aliquam erat volutpat.
+    footer: cite(title='Citation source') Citation source
+h3 Inline elements
+.sandbox
+  ul
+    li <abbr>abbr element</abbr> example without a title
+    li <abbr title="Abbreviation">abbr element</abbr> example with a title
+    li <b>b element</b> example
+    li <cite>cite element</cite> example
+    li <code>code element</code> example
+    li <del>del element</del> example
+    li <dfn>dfn element</dfn> example
+    li <em>em element</em> example
+    li <i>i element</i> example
+    li img element <img src='' /> example
+    li <ins>ins element</ins> example
+    li <kbd>kbd element</kbd> example
+    li <mark>mark element</mark> example
+    li <q>q element</q> example
+    li <s>s element</s> example
+    li <samp>samp element</samp> example
+    li <small>small element</small> example
+    li <span>span element</span> example
+    li <strong>strong element</strong> example
+    li <sub>sub element</sub> example
+    li <sup>sup element</sup> example
+    li <u>u element</u> example
+    li <var>var element</var> example
+h3 <code>pre</code>formatted
+.sandbox
+  pre.
+    When I heard the learn’d astronomer;
+      When the proofs, the figures, were ranged in columns before me;
+    When I was shown the charts and the diagrams, to add, divide,
+          and measure them;
+    When I, sitting, heard the astronomer, where he lectured with
+      much applause in the lecture-room,
+    How soon, unaccountable, I became tired and sick;
+
+      Till rising and gliding out, I wander’d off by myself,
+    In the mystical moist night-air, and from time to time,
+            Look’d up in perfect silence at the stars.
