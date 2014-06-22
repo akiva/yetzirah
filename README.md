@@ -10,7 +10,6 @@ mixins, and other classes to ease CSS development and encourage the
 
 [![NPM](https://nodei.co/npm/yetzirah.png)](https://nodei.co/npm/yetzirah/)
 [![NPM version](https://badge.fury.io/js/yetzirah.png)](http://badge.fury.io/js/yetzirah)
-[![Travis build status](https://travis-ci.org/akiva/yetzirah.png?branch=master)](https://travis-ci.org/akiva/yetzirah)
 
 ## Installation
 
