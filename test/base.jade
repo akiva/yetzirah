@@ -1,64 +1,80 @@
 h2#base Base styles and foundation
 p
-  | Yetzirah implements
+  | Yetzirah implements a sane baseline for mobile-first responsive Web
+  | design. Reset and normalization rules have been adopted and tweaked
+  | from various sources, including
   = ' '
   a(href='http://necolas.github.com/normalize.css/') Normalize.css
-  |  rather than a CSS reset. This allows for building atop a reliable,
+  = ' and '
+  a(href='http://www.cssreset.com/scripts/html5-doctor-css-reset-stylesheet/')
+    | HTML5 Doctor Reset CSS
+  | . This allows for building atop a reliable,
   | HTML5-ready base, yielding a satisfactory cross-browser consistency.
   | The purpose of this library is to keep things as modular and
-  | extensible as possible. As such, we aim to minimize the amount of
-  | element styles we alter, instead opting to focus on form and
+  | extensible as possible. As such, the aim is to minimize the amount
+  | of element styles we alter, instead opting to focus on form and
   | structure (using semantic styles, functions, and mixins).
 p All font sizes are defined in <code>rem</code>.
-h3 Headings
-.sandbox
+h3 Headings and paragraphs
+.demo
   h1 Heading 1
+  p= bogan({ paragraphs: 1 })
   h2 Heading 2
+  p= bogan({ paragraphs: 1 })
   h3 Heading 3
+  p= bogan({ paragraphs: 1 })
   h4 Heading 4
+  p= bogan({ paragraphs: 1 })
   h5 Heading 5
+  p= bogan({ paragraphs: 1 })
   h6 Heading 6
+  p= bogan({ paragraphs: 1 })
 h3 Lists
 h4 Ordered list
-.sandbox
+.demo
   ol
-    li Ordered list item
-    li Ordered list item
+    li= bogan({ paragraphs: 1, sentenceMin: 1, sentenceMax: 5 })
+    li= bogan({ paragraphs: 1, sentenceMin: 1, sentenceMax: 5 })
+    li
+      = bogan({ paragraphs: 1, sentenceMin: 1, sentenceMax: 5 })
       ol
-        li Ordered list item
-        li Ordered list item
+        li= bogan({ paragraphs: 1, sentenceMin: 1, sentenceMax: 5 })
+        li
+          = bogan({ paragraphs: 1, sentenceMin: 1, sentenceMax: 5 })
           ol
-            li Ordered list item
-            li Ordered list item
-        li Ordered list item
-    li Ordered list item
+            li= bogan({ paragraphs: 1, sentenceMin: 1, sentenceMax: 5 })
+            li= bogan({ paragraphs: 1, sentenceMin: 1, sentenceMax: 5 })
+        li= bogan({ paragraphs: 1, sentenceMin: 1, sentenceMax: 5 })
+    li= bogan({ paragraphs: 1, sentenceMin: 1, sentenceMax: 5 })
 h4 Unordered list
-.sandbox
+.demo
   ul
-    li Unordered list item
-    li Unordered list item
+    li= bogan({ paragraphs: 1, sentenceMin: 1, sentenceMax: 5 })
+    li
+      = bogan({ paragraphs: 1, sentenceMin: 1, sentenceMax: 5 })
       ul
-        li Unordered list item
-        li Unordered list item
+        li= bogan({ paragraphs: 1, sentenceMin: 1, sentenceMax: 5 })
+        li
+          = bogan({ paragraphs: 1, sentenceMin: 1, sentenceMax: 5 })
           ul
-            li Unordered list item
-            li Unordered list item
-        li Unordered list item
-    li Unordered list item
+            li= bogan({ paragraphs: 1, sentenceMin: 1, sentenceMax: 5 })
+            li= bogan({ paragraphs: 1, sentenceMin: 1, sentenceMax: 5 })
+        li= bogan({ paragraphs: 1, sentenceMin: 1, sentenceMax: 5 })
+    li= bogan({ paragraphs: 1, sentenceMin: 1, sentenceMax: 5 })
 h4 Unordered comma-separated list
-.sandbox
+.demo
   ul.comma-list
     li Unordered list item
     li Unordered list item
     li Unordered list item
 h4 Unordered serial comma-separated list
-.sandbox
+.demo
   ul.serial-comma-list
     li Unordered list item
     li Unordered list item
     li Unordered list item
 h4 Definition list
-.sandbox
+.demo
   dl
     dt Definition term
     dd Definition description
@@ -69,53 +85,47 @@ h4 Definition list
     dt Definition term
     dd Definition description
 h3 Addresses
-.sandbox
+.demo
   address
     a(href='https://github.com/akiva') Akiva Levy
 h3 Blockquotes
 h4 Without <code>cite</code> tag
-.sandbox
+.demo
   blockquote
-    p.
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-      diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-      aliquam erat volutpat.
+    p= bogan({ paragraphs: 1 })
 h4 With <code>cite</code> tag
-.sandbox
+.demo
   blockquote
-    p.
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-      diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-      aliquam erat volutpat.
+    p= bogan({ paragraphs: 1 })
     footer: cite(title='Citation source') Citation source
 h3 Inline elements
-.sandbox
+.demo
   ul
-    li <abbr>abbr element</abbr> example without a title
-    li <abbr title="Abbreviation">abbr element</abbr> example with a title
-    li <b>b element</b> example
-    li <cite>cite element</cite> example
-    li <code>code element</code> example
-    li <del>del element</del> example
-    li <dfn>dfn element</dfn> example
-    li <em>em element</em> example
-    li <i>i element</i> example
+    li <abbr>abbr</abbr> element example without a title
+    li <abbr title="Abbreviation">abbr</abbr> element example with a title
+    li <b>b</b> element example
+    li <cite>cite</cite> element example
+    li <code>code</code> element example
+    li <del>del</del> element example
+    li <dfn>dfn</dfn> element example
+    li <em>em</em> element example
+    li <i>i</i> element example
     li img element <img src='' /> example
-    li <ins>ins element</ins> example
-    li <kbd>kbd element</kbd> example
-    li <mark>mark element</mark> example
-    li <q>q element</q> example
-    li <s>s element</s> example
-    li <samp>samp element</samp> example
-    li <small>small element</small> example
-    li <span>span element</span> example
-    li <strong>strong element</strong> example
-    li <sub>sub element</sub> example
-    li <sup>sup element</sup> example
-    li <u>u element</u> example
-    li <var>var element</var> example
+    li <ins>ins</ins> element example
+    li <kbd>kbd</kbd> element example
+    li <mark>mark</mark> element example
+    li <q>q</q> element example
+    li <s>s</s> element example
+    li <samp>samp</samp> element example
+    li <small>small</small> element example
+    li <span>span</span> element example
+    li <strong>strong</strong> element example
+    li <sub>sub</sub> element example
+    li <sup>sup</sup> element example
+    li <u>u</u> element example
+    li <var>var</var> element example
 h3 <code>pre</code>formatted
-.sandbox
+.demo
   pre.
     When I heard the learn’d astronomer;
       When the proofs, the figures, were ranged in columns before me;

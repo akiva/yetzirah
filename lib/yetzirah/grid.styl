@@ -1,24 +1,19 @@
-// Mobile-first grid styles
+// TODO implement basic responsive breakpoints
 
 @import config
 
 container()
-  margin 0 auto padding
+  margin 0 auto gutter
   clearfix()
   // max-width 53rem
-  // width 90%
 
 column(numerator = 1, denominator = 1)
-  selector()
-  margin-bottom padding
+  margin-bottom gutter
 
   @media (min-width: 40rem)
     float left
     margin 0
-    // padding-left 1rem
-    // padding-right 1rem
     width (round((numerator / denominator * 100), 2))%
-    padding-right padding
-    // width = (@width + width)
+    padding-right gutter
     &:last-of-type
       padding-right 0

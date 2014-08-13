@@ -2,9 +2,11 @@
 
 var gulp = require('gulp');
 var stylus = require('gulp-stylus');
+var bogan = require('boganipsum');
 var jade = require('gulp-jade');
 var clean = require('gulp-clean');
 var connect = require('gulp-connect');
+var autoprefix = require('gulp-autoprefixer');
 
 gulp.task('clean', function() {
   return gulp.src(
@@ -20,12 +22,13 @@ gulp.task('clean', function() {
 gulp.task('stylus', function() {
   gulp.src('./test/css/app.styl')
     .pipe(stylus())
+    .pipe(autoprefix('last 1 version'))
     .pipe(gulp.dest('./test/css'))
     .pipe(connect.reload());
 });
 
 gulp.task('jade', function() {
-  var LOCALS = {};
+  var LOCALS = { bogan: bogan };
 
   gulp.src('./test/**/*.jade')
     .pipe(jade({ locals: LOCALS }))

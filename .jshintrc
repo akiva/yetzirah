@@ -3,7 +3,6 @@
   "camelcase": true,
   "eqeqeq": true,
   "eqnull": true,
-  "es5": true,
   "esnext": true,
   "forin": false,
   "indent": 2,

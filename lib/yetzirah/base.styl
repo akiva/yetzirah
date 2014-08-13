@@ -1,16 +1,7 @@
 @import config
 
-*
-*:before
-*:after
-  box-sizing border-box
-
 // Small screens (default)
 html
-  font-size 100%
-  font-weight 400
-  text-rendering optimizeLegibility
-  -webkit-font-smoothing antialiased
 
   // Medium screens (640px)
   @media (min-width: 40rem)
@@ -19,15 +10,3 @@ html
   // Large screens (1024px +)
   @media (min-width: 64rem)
     font-size 120%
-
-// Set better default colours
-body
-  background-color #fff
-  color #555
-
-blockquote
-  border-left 5px solid #ccc
-  padding-left padding
-  & > cite:before
-  footer:before
-    content: '— '

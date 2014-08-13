@@ -1,46 +1,54 @@
 @import '../../'
 
 body
-  width: 90%
-  margin: 0 auto
+  margin gutter
 
-.sandbox
-.grid-container
+.demo
   border 1px solid rgba(0, 0, 0, 0.1)
   background #efefef
-
-.grid-container
-  container()
-
-.sandbox
-.grid-container
+  padding gutter gutter 0 gutter
+  margin-bottom gutter
 
   &:before
-    content 'DEMO'
-    padding 1rem
+    content 'Demo'
+    text-transform uppercase
+    padding gutter
+    margin (gutter * -1) (gutter * -1) gutter
     display block
     background rgba(255, 255, 255, 0.5)
     border-bottom 1 solid rgba(0, 0, 0, 0.1)
 
-.box
-  &.column-full
-    column()
-  &.column-one-one
-    column(1, 1)
-  &.column-one-half
-    column(1, 2)
-  &.column-one-third
-    column(1, 3)
-  &.column-two-thirds
-    column(2, 3)
-  &.column-one-quarter
-    column(1, 4)
-  &.column-one-eighth
-    column(1, 8)
+.grid-container
+  container()
+  margin-bottom 0
+.column-full
+  column()
+.column-one-one
+  column(1, 1)
+.column-one-half
+  column(1, 2)
+.column-one-third
+  column(1, 3)
+.column-two-thirds
+  column(2, 3)
+.column-one-quarter
+  column(1, 4)
+.column-one-eighth
+  column(1, 8)
+
+.column-full
+.column-one-one
+.column-one-half
+.column-one-third
+.column-two-thirds
+.column-one-quarter
+.column-one-eighth
+
   p
     text-align center
-    background #fff
-    padding: 1rem
+    padding gutter
+    background rgb(255, 255, 255)
+    border 1px solid rgba(0, 0, 0, 0.1)
 
 ul.comma-list
   comma-list()
@@ -48,57 +56,57 @@ ul.comma-list
 ul.serial-comma-list
   comma-list(true)
 
-p.cursive
+.cursive
   font-family cursive-font-stack
-p.monospace
+.monospace
   font-family monospace-font-stack
-p.garamond
+.garamond
   font-family garamond-font-stack
-p.lucida-bright
+.lucida-bright
   font-family lucida-bright-font-stack
-p.palatino
+.palatino
   font-family palatino-font-stack
-p.big-caslon
+.big-caslon
   font-family big-caslon-font-stack
-p.didot
+.didot
   font-family didot-font-stack
-p.baskerville
+.baskerville
   font-family baskerville-font-stack
-p.hoefler-text
+.hoefler-text
   font-family hoefler-text-font-stack
-p.bodoni-mt
+.bodoni-mt
   font-family bodoni-mt-font-stack
-p.goudy-old-style
+.goudy-old-style
   font-family goudy-old-style-font-stack
-p.constantia
+.constantia
   font-family constantia-font-stack
-p.cambria
+.cambria
   font-family cambria-font-stack
-p.book-antiqua
+.book-antiqua
   font-family book-antiqua-font-stack
-p.optima
+.optima
   font-family optima-font-stack
-p.futura
+.futura
   font-family futura-font-stack
-p.gill-sans
+.gill-sans
   font-family gill-sans-font-stack
-p.trebuchet
+.trebuchet
   font-family trebuchet-font-stack
-p.helvetica
+.helvetica
   font-family helvetica-font-stack
-p.verdana
+.verdana
   font-family verdana-font-stack
-p.lucida-grande
+.lucida-grande
   font-family lucida-grande-font-stack
-p.geneva
+.geneva
   font-family geneva-font-stack
-p.segoe
+.segoe
   font-family segoe-font-stack
-p.candara
+.candara
   font-family candara-font-stack
-p.calibri
+.calibri
   font-family calibri-font-stack
-p.franklin-gothic
+.franklin-gothic
   font-family franklin-gothic-font-stack
-p.tahoma
+.tahoma
   font-family tahoma-font-stack

@@ -1,6 +1,6 @@
 {
   "name": "yetzirah",
-  "version": "0.1.0-alpha",
+  "version": "0.1.1",
   "description": "A flexible, semantic, and responsive library for Stylus",
   "main": "lib/yetzirah.js",
   "repository": {
@@ -11,11 +11,13 @@
     "stylus": "~0.45.1"
   },
   "devDependencies": {
-    "gulp": "~3.8.0",
-    "gulp-stylus": "~1.0.2",
-    "gulp-jade": "~0.5.0",
+    "boganipsum": "^0.1.0",
+    "gulp": "~3.8.5",
+    "gulp-autoprefixer": "0.0.8",
     "gulp-clean": "~0.3.0",
-    "gulp-connect": "~2.0.5"
+    "gulp-connect": "~2.0.5",
+    "gulp-jade": "~0.5.0",
+    "gulp-stylus": "~1.0.2"
   },
   "author": "Akiva Levy <akiva@sixthirteen.co> (http://sixthirteen.co/)",
   "license": "MIT",
