@@ -14,3 +14,6 @@ comma-list(serial = false)
     if serial
       &:last-child:before
         content 'and '
+      &:first-child:before
+      &:nth-child(2):before
+        content ''
