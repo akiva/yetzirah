@@ -1,4 +1,11 @@
-# Yetzirah
+```
+      ██╗   ██╗███████╗████████╗███████╗██╗██████╗  █████╗ ██╗  ██╗
+      ╚██╗ ██╔╝██╔════╝╚══██╔══╝╚══███╔╝██║██╔══██╗██╔══██╗██║  ██║
+       ╚████╔╝ █████╗     ██║     ███╔╝ ██║██████╔╝███████║███████║
+        ╚██╔╝  ██╔══╝     ██║    ███╔╝  ██║██╔══██╗██╔══██║██╔══██║
+         ██║   ███████╗   ██║   ███████╗██║██║  ██║██║  ██║██║  ██║
+         ╚═╝   ╚══════╝   ╚═╝   ╚══════╝╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝
+```
 
 Yetzirah is a lightweight, responsive, and semantic CSS library built
 using the [Stylus][1] pre-processor.
@@ -6,7 +13,9 @@ using the [Stylus][1] pre-processor.
 It is important to note that it is not the aim of this project to become
 a framework but rather a collection of useful patterns, functions,
 mixins, and other classes to ease CSS development and encourage the
-[KISS principle][2].
+[KISS principle][2]. Due to this reason, Yetzirah may be used in
+conjunction with any CSS framework you may wish to use, if that's your
+bag.
 
 [![NPM](https://nodei.co/npm/yetzirah.png)](https://nodei.co/npm/yetzirah/)
 [![NPM version](https://badge.fury.io/js/yetzirah.png)](http://badge.fury.io/js/yetzirah)
@@ -14,8 +23,8 @@ mixins, and other classes to ease CSS development and encourage the
 ## Installation
 
 It is assumed that you already have a working installation of both
-[Node.js][3] and [Stylus][1], if not, please refer to either project
-page to get both up and running.
+[Node.js][3] and [Stylus][1] on your local system. If not, please refer 
+to either project page to get both up and running.
 
 Install Yetzirah for your project:
 
@@ -24,6 +33,19 @@ Install Yetzirah for your project:
 Or install it globally on your system:
 
     npm install -g yetzirah
+
+Within your Javascript Stylus task, you can now include `yetzirah`
+within the `use()` options, ie:
+
+    return stylus(str)
+      // ...
+      .use(yetzirah());
+
+If you are wishing to use your `.styl` files via the command-line to
+directly render/export to CSS, you can have Stylus use this library with
+the following command:
+
+    stylus filename.styl --use path/to/yetzirah
 
 You can now begin using Yetzirah within your Stylus `.styl` files by
 using the `@import` declaration provided by Stylus:
@@ -36,12 +58,6 @@ directory you wish to import, should you not desire the entire library:
 
     @import 'yetzirah/font-stacks/sans-serif'
     @import 'yetzirah/grid'
-
-If you are wishing to use your `.styl` files via the command-line to
-directly render/export to CSS, you can have Stylus use this library with
-the following command:
-
-    stylus filename.styl --use ../yetzirah/lib/yetzirah
 
 ## Contributing
 
