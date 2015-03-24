@@ -8,16 +8,14 @@
     "url": "git://github.com/akiva/yetzirah.git"
   },
   "dependencies": {
-    "stylus": "~0.45.1"
+    "stylus": "^0.45.1"
   },
   "devDependencies": {
+    "autoprefixer-stylus": "^0.5.0",
     "boganipsum": "^0.1.0",
-    "del": "^0.1.3",
-    "gulp": "^3.8.10",
-    "gulp-autoprefixer": "0.0.8",
-    "gulp-jade": "~0.5.0",
-    "gulp-stylus": "~1.0.2",
-    "gulp-webserver": "^0.8.7"
+    "ecstatic": "^0.7.0",
+    "jade": "^1.9.2",
+    "rimraf": "^2.3.2"
   },
   "author": "Akiva Levy <akiva@sixthirteen.co> (http://sixthirteen.co/)",
   "license": "MIT",
@@ -29,5 +27,18 @@
     "stylus",
     "nib",
     "semantic"
-  ]
+  ],
+  "scripts": {
+    "clean": "rimraf demo/**/*.{js,css,html}",
+    "prebuild": "npm run clean",
+    "build": "npm run build-css && npm run build-markup",
+    "build-css": "stylus -u autoprefixer-stylus -u ./lib/yetzirah demo/main.styl -c -o demo",
+    "build-markup": "jade -O \"{\"bogan\": require('boganipsum')}\" demo/index.jade -o demo",
+    "watch": "npm run watch-css & npm run watch-markup",
+    "watch-css": "stylus -u autoprefixer-stylus -u ./lib/yetzirahdemo/main.styl -m -w -o demo",
+    "watch-markup": "jade --watch -O \"{\"bogan\": require('boganipsum')}\" demo/index.jade -o demo",
+    "prestart": "npm run build",
+    "start": "node server.js",
+    "start-dev": "npm run watch & npm start"
+  }
 }

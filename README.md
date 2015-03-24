@@ -59,6 +59,17 @@ directory you wish to import, should you not desire the entire library:
     @import 'yetzirah/font-stacks/sans-serif'
     @import 'yetzirah/grid'
 
+## Run the demo
+
+In order to preview the included demo, you need to clone this project
+locally, install the dependencies via `npm install`, and then run the 
+`npm start` script. You can then view the demo output by visiting 
+<http://localhost:8000> in your browser. 
+
+Although CSS classes are used to target specific elements in the 
+demonstration, you can view the source code itself to see that we merely 
+include mixins where required (you can find these in `demo/`).
+
 ## Contributing
 
 If you would like to contribute to the project, please create a fork and

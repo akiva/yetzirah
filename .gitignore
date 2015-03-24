@@ -1,4 +1,4 @@
 node_modules
 coverage
-test/**/*.html
-test/**/*.css
+demo/**/*.html
+demo/**/*.css
